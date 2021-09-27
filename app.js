@@ -30,8 +30,10 @@ var startButton= document.querySelector('.startt');
 var displayUnit= document.querySelector('.randomParagraphGenerated');
 var inputUnit= document.querySelector('#paragraphInput');
 var endButton= document.querySelector('.donee');
+var startOver= document.querySelector('.startOver');
 startButton.addEventListener('click',startTyping);
 endButton.addEventListener('click',endTyping);
+startOver.addEventListener('click',startAgain);
 
 // A RANDOM PARAGRAPH IS GENERATED FOR TYPING
 function generateRandomParagraph(){
@@ -90,21 +92,30 @@ function endTyping(){
    accuracy= accuracy.toFixed(2);
    $('#ac').html(accuracy);
    $('#wpm').html(speed);
-   $('.endd').show();
-   $('.accuracy').show();
    $('#acc').html(accuracy);
    $('#spd').html(speed);
+   $('.overlay').show();
+   document.body.classList.add('overlay-is-open');
+//    $('.startt').html('RESTART TEST');   
+}
+
+function startAgain(){
+   $('.overlay').hide(); 
+   document.body.classList.remove('overlay-is-open');
+   $('.startt').show(); 
    $('.guidelines').show();
    $('#paragraphInput').val("");
    $('.answer').hide();
+   $('#spd').html('0');
+   $('.speed').hide();
    start=0; timePassed=0; words=0;
-   $('.startt').html('RESTART TEST');   
 }
 
 //FUNCTION TO START THE PROCESS
 function startTyping(){
     start++;
-    $('.endd').hide();
+    $('.speed').show();
+    $('.startt').hide();
     $('.guidelines').hide();
     $('.answer').show();
     $('.accuracy').hide();
