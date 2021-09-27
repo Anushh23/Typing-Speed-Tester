@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="favicon.png" rel="shortcut icon">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
@@ -30,20 +32,21 @@
     <title>Typing Speed Game</title>
 </head>
 <body>
+    <div class="main-ui">
      <!-- header -->
      <header class="container-fluid d-flex align-items-center text-center justify-content-center p-2 p-md-4" id="heading">
          <h1 class="titlee">Typing Speed Test</h1>
      </header>
      <!-- content -->
-     <div class="container text-center mb-1 mb-md-3">
+     <!-- <div class="container text-center mb-1 mb-md-3">
          <button class="btn startt" type="button">START TYPING TEST</button>
-     </div>
+     </div> -->
      <div class="scoreboard pb-md-2">
           <div class="speed text-center">
               <i class="fas fa-clock "></i> Speed:
               <span id="typingSpeed"><span id="spd"style="font-size: larger">0</span><sub>WPM</sub></span>
           </div>
-          <div class="accuracy text-center">
+          <div class="accuracy text-center d-none">
               <i class="fas fa-bullseye "></i> Accuracy: 
               <span id="typingAccuracy"><span id="acc" style="font-size: larger">100</span><sub>%</sub></span>
           </div>
@@ -64,9 +67,19 @@
              <div class="text-center"><button class="btn  donee text-center">DONE</button></div>
          </div>
      </div>
-     <br> 
+     <div class="container text-center mb-1 mb-md-3 pt-3 pt-md-6 mt-md-5">
+        <button class="btn startt" type="button">START TYPING TEST</button>
+    </div>
+     </div>
+     <!-- <br> 
      <div class="text-center endd">
          You typed at the speed of <span id="wpm" style="font-size: 1.2rem;">0</span> words per minute with an accuracy of <span id="ac" style="font-size: 1.2rem;">100</span> percent 🎆🎊
+     </div> -->
+     <div class="overlay" >
+         <div class="overlay-inner container text-center">
+             <div class="text-center endd" style="color:rgb(1, 1, 26); font-weight: 700px"> You typed at the speed of <span id="wpm" style="font-size: 1.2rem;">0</span> words per minute with an accuracy of <span id="ac" style="font-size: 1.2rem;">100</span> percent 🎆🎊</div>
+             <div class="text-center pt-md-3"><button class="btn btn-info startOver">Start Over</button></div>
+         </div>
      </div>
     <!-- JS -->
     <script src="app.js"></script>
