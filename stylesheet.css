@@ -8,24 +8,28 @@ body{
     min-height: 100vh;
 }
 .scoreboard{
-    /* visibility: hidden; */
     font-family: cursive;
 }
 .startt{
     color: white;
     text-decoration: none;
     border: 1px solid whitesmoke;
+    box-shadow: 0 2px 5px whitesmoke;
 }
 .donee{
     border: 1.2px solid rgb(13, 99, 99);
     border-radius: 0.5rem;
 }
 .donee:hover{
-    background-color:rgb(138, 236, 236);
+    /* background-color:rgb(138, 236, 236); */
+    color: #eee;
+    background-color: rgb(8, 8, 94);
+    font-weight: 700;
 }
 .startt:hover{
-    color: whitesmoke;
-    background-color: rgb(8, 8, 94);
+    color: rgb(8, 8, 94);
+    background-color: rgb(213, 250, 255);
+    font-weight: 700;
 }
 .correct{
     color: rgb(13, 184, 13);
@@ -53,7 +57,21 @@ body{
     /* font-family: 'Pacifico', cursive; */
     font-family: cursive;
     font-size: 1.2rem;
-    display: none;
+    /* display: none; */
+}
+.overlay{
+    position:fixed;
+    top:0;bottom:0;left:0;right:0;
+    background-color: rgba(255,255,255,.82);
+    color: rgb(1, 1, 26);
+    opacity:1;
+    display:none;
+}
+.overlay-inner{
+    margin-top:200px;
+}
+body.overlay-is-open .main-ui{
+    filter:blur(4px);
 }
 .answer{
     display: none;
@@ -63,6 +81,9 @@ body{
 }
 #typingSpeed, #typingAccuracy{
     color: rgb(17, 165, 165);
+}
+.speed{
+    display:none;
 }
 #paragraphInput{
     width: 100%;
