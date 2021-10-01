@@ -24,7 +24,7 @@ body{
 .donee:hover{
     color: #eee;
     background-color: rgb(8, 8, 94);
-    font-weight: 700;
+    font-weight: 750;
 }
 .startt:hover{
     color: rgb(8, 8, 94);
@@ -44,7 +44,7 @@ body{
 }
 #para{
     border-radius: 1.5rem;
-    background-image: linear-gradient(to right, #71b1de, #3786cd, #005bb7, #142c98);
+    background-image: linear-gradient(to right, #3786cd, #005bb7, #142c98);
     color: black;
     letter-spacing: 0.04rem;
     position: relative;
@@ -53,7 +53,7 @@ body{
     box-shadow: 5px 0 20px rgba(0, 0, 0, 0.493);
 }
 ul li{
-    background-image: linear-gradient(to right, #71b1de, #3786cd, #005bb7, #142c98);
+    background-image: linear-gradient(to right, #3786cd, #005bb7, #142c98);
     font-family:'Times New Roman', Times, serif;
     font-size: 18px;
     font-weight:500px;
